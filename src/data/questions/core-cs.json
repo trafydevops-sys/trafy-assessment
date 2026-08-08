@@ -1,0 +1,285 @@
+[
+  {
+    "id": "q1",
+    "kind": "mcq",
+    "topic": "Operating Systems",
+    "prompt": "Which CPU scheduling algorithm can lead to starvation of low-priority processes?",
+    "options": [
+      "First-Come, First-Served",
+      "Round Robin",
+      "Priority Scheduling",
+      "Shortest Job Next"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q2",
+    "kind": "mcq",
+    "topic": "Operating Systems",
+    "prompt": "What is a deadlock in an operating system?",
+    "options": [
+      "A process consuming 100% CPU",
+      "A situation where two or more processes wait indefinitely for each other to release resources",
+      "Memory allocation failure",
+      "An infinite loop in user code"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q3",
+    "kind": "mcq",
+    "topic": "Operating Systems",
+    "prompt": "Which page replacement algorithm is guaranteed to have the lowest page fault rate?",
+    "options": [
+      "LRU (Least Recently Used)",
+      "FIFO (First In First Out)",
+      "OPT (Optimal)",
+      "LFU (Least Frequently Used)"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q4",
+    "kind": "mcq",
+    "topic": "DBMS",
+    "prompt": "Which normal form eliminates transitive functional dependencies?",
+    "options": [
+      "1NF",
+      "2NF",
+      "3NF",
+      "BCNF"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q5",
+    "kind": "mcq",
+    "topic": "DBMS",
+    "prompt": "In SQL, what does the HAVING clause do?",
+    "options": [
+      "Filters rows before grouping",
+      "Filters rows after the GROUP BY clause",
+      "Sorts the result set",
+      "Creates an index"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q6",
+    "kind": "mcq",
+    "topic": "DBMS",
+    "prompt": "Which of the following is NOT a property of a transaction (ACID)?",
+    "options": [
+      "Atomicity",
+      "Concurrency",
+      "Isolation",
+      "Durability"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q7",
+    "kind": "mcq",
+    "topic": "Computer Networks",
+    "prompt": "Which layer of the OSI model is responsible for routing packets between networks?",
+    "options": [
+      "Data Link Layer",
+      "Transport Layer",
+      "Network Layer",
+      "Session Layer"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q8",
+    "kind": "mcq",
+    "topic": "Computer Networks",
+    "prompt": "What is the main difference between TCP and UDP?",
+    "options": [
+      "TCP is faster",
+      "UDP provides reliable, ordered delivery",
+      "TCP provides reliable, ordered delivery while UDP does not",
+      "UDP is used only for file transfer"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q9",
+    "kind": "mcq",
+    "topic": "Computer Networks",
+    "prompt": "What does DNS stand for and what does it do?",
+    "options": [
+      "Data Network Service – stores files",
+      "Domain Name System – translates domain names to IP addresses",
+      "Digital Number Scheme – assigns port numbers",
+      "Direct Node Service – manages network nodes"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q10",
+    "kind": "mcq",
+    "topic": "DSA",
+    "prompt": "What is the time complexity of binary search on a sorted array of n elements?",
+    "options": [
+      "O(n)",
+      "O(n²)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q11",
+    "kind": "mcq",
+    "topic": "DSA",
+    "prompt": "Which data structure uses LIFO (Last In, First Out) order?",
+    "options": [
+      "Queue",
+      "Heap",
+      "Stack",
+      "Linked List"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q12",
+    "kind": "mcq",
+    "topic": "DSA",
+    "prompt": "What is the worst-case time complexity of QuickSort?",
+    "options": [
+      "O(n log n)",
+      "O(n²)",
+      "O(n)",
+      "O(log n)"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q13",
+    "kind": "mcq",
+    "topic": "OOP",
+    "prompt": "Which OOP principle allows a subclass to provide a specific implementation of a method already defined in its parent class?",
+    "options": [
+      "Encapsulation",
+      "Abstraction",
+      "Polymorphism",
+      "Inheritance"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q14",
+    "kind": "mcq",
+    "topic": "OOP",
+    "prompt": "What is encapsulation in OOP?",
+    "options": [
+      "Creating multiple classes",
+      "Hiding internal implementation details and exposing only necessary interfaces",
+      "Inheriting from multiple classes",
+      "Overloading methods"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q15",
+    "kind": "mcq",
+    "topic": "System Design",
+    "prompt": "What is a load balancer used for?",
+    "options": [
+      "To store data redundantly",
+      "To distribute incoming network traffic across multiple servers",
+      "To compress data for faster transmission",
+      "To encrypt data in transit"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q16",
+    "kind": "mcq",
+    "topic": "System Design",
+    "prompt": "Which caching strategy updates the cache when data is written?",
+    "options": [
+      "Cache-aside",
+      "Write-through",
+      "Read-through",
+      "Lazy loading"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q17",
+    "kind": "mcq",
+    "topic": "Operating Systems",
+    "prompt": "What is virtual memory?",
+    "options": [
+      "RAM installed on the graphics card",
+      "A technique that uses disk space to extend the apparent size of RAM",
+      "A reserved section of physical RAM",
+      "Memory shared between processes"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q18",
+    "kind": "mcq",
+    "topic": "DBMS",
+    "prompt": "Which type of SQL JOIN returns all records from both tables, filling NULL where there are no matches?",
+    "options": [
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "FULL OUTER JOIN"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "q19",
+    "kind": "mcq",
+    "topic": "Computer Networks",
+    "prompt": "At which OSI layer does a switch operate?",
+    "options": [
+      "Layer 1 – Physical",
+      "Layer 2 – Data Link",
+      "Layer 3 – Network",
+      "Layer 4 – Transport"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q20",
+    "kind": "mcq",
+    "topic": "DSA",
+    "prompt": "Which algorithm is used to find the shortest path in a weighted graph with no negative edges?",
+    "options": [
+      "Bellman-Ford",
+      "Dijkstra's Algorithm",
+      "DFS",
+      "BFS"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q21",
+    "kind": "code",
+    "topic": "DSA",
+    "prompt": "Write a function `twoSum(nums, target)` that returns the indices of the two numbers in the array that add up to `target`. Assume exactly one solution exists.",
+    "language": "javascript",
+    "starterCode": "function twoSum(nums, target) {\n  // your code here\n}",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "expectedOutput": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "expectedOutput": "[1,2]"
+      },
+      {
+        "input": "[3,3], 6",
+        "expectedOutput": "[0,1]"
+      }
+    ],
+    "difficulty": 2
+  }
+]

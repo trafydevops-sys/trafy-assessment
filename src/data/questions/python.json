@@ -1,0 +1,285 @@
+[
+  {
+    "id": "q1",
+    "kind": "mcq",
+    "topic": "Core Python",
+    "prompt": "What is the output of: `print(type([]))`?",
+    "options": [
+      "<class 'tuple'>",
+      "<class 'dict'>",
+      "<class 'list'>",
+      "<class 'array'>"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q2",
+    "kind": "mcq",
+    "topic": "Core Python",
+    "prompt": "Which of the following is an immutable data type in Python?",
+    "options": [
+      "List",
+      "Dictionary",
+      "Set",
+      "Tuple"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "q3",
+    "kind": "mcq",
+    "topic": "Decorators",
+    "prompt": "What is a decorator in Python?",
+    "options": [
+      "A design pattern for creating objects",
+      "A function that takes another function and extends its behavior without modifying it",
+      "A class decorator",
+      "A syntax for list comprehension"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q4",
+    "kind": "mcq",
+    "topic": "Generators",
+    "prompt": "What keyword is used to create a generator function in Python?",
+    "options": [
+      "return",
+      "async",
+      "yield",
+      "generate"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q5",
+    "kind": "mcq",
+    "topic": "Generators",
+    "prompt": "What is the main advantage of a generator over a list?",
+    "options": [
+      "Generators are faster for random access",
+      "Generators are memory-efficient as they produce values lazily",
+      "Generators support indexing",
+      "Generators are always sorted"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q6",
+    "kind": "mcq",
+    "topic": "List Comprehensions",
+    "prompt": "What does this expression produce: `[x**2 for x in range(5)]`?",
+    "options": [
+      "[1,4,9,16,25]",
+      "[0,1,4,9,16]",
+      "[0,1,2,3,4]",
+      "[1,2,3,4,5]"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q7",
+    "kind": "mcq",
+    "topic": "Memory Management",
+    "prompt": "How does Python manage memory?",
+    "options": [
+      "Manual memory management like C",
+      "Through garbage collection using reference counting",
+      "By reserving fixed memory blocks",
+      "Using JVM memory model"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q8",
+    "kind": "mcq",
+    "topic": "Data Structures",
+    "prompt": "What is the time complexity of looking up a key in a Python dictionary?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(1) average",
+      "O(n²)"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q9",
+    "kind": "mcq",
+    "topic": "Core Python",
+    "prompt": "What does `*args` allow in a Python function?",
+    "options": [
+      "Pass keyword arguments",
+      "Pass a variable number of positional arguments",
+      "Unpack a dictionary",
+      "Multiply arguments"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q10",
+    "kind": "mcq",
+    "topic": "Core Python",
+    "prompt": "What is a lambda function in Python?",
+    "options": [
+      "A class method",
+      "An anonymous single-expression function",
+      "A recursive function",
+      "A decorator"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q11",
+    "kind": "mcq",
+    "topic": "OOP in Python",
+    "prompt": "What is `__init__` in Python?",
+    "options": [
+      "The destructor method",
+      "The constructor method that initializes a new object",
+      "A static method",
+      "A class variable"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q12",
+    "kind": "mcq",
+    "topic": "Core Python",
+    "prompt": "What is the difference between `is` and `==` in Python?",
+    "options": [
+      "They are the same",
+      "== checks identity; is checks equality",
+      "is checks identity (same object in memory); == checks value equality",
+      "is is only for numbers"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q13",
+    "kind": "mcq",
+    "topic": "Data Structures",
+    "prompt": "Which Python data structure is most appropriate for implementing a stack?",
+    "options": [
+      "dict",
+      "set",
+      "list (using append/pop)",
+      "tuple"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q14",
+    "kind": "mcq",
+    "topic": "Decorators",
+    "prompt": "What does `@staticmethod` do in Python?",
+    "options": [
+      "Makes a method a class method",
+      "Defines a method that doesn't receive the instance or class as first argument",
+      "Prevents overriding",
+      "Marks a method as private"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q15",
+    "kind": "mcq",
+    "topic": "Core Python",
+    "prompt": "What is the GIL in Python?",
+    "options": [
+      "Global Input Library",
+      "A thread lock that allows only one thread to execute Python bytecode at a time",
+      "A garbage collection mechanism",
+      "A type of decorator"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q16",
+    "kind": "mcq",
+    "topic": "Data Structures",
+    "prompt": "What does the `enumerate()` function do in Python?",
+    "options": [
+      "Converts a list to a dictionary",
+      "Returns (index, value) pairs when iterating",
+      "Sorts a list",
+      "Filters elements from a list"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q17",
+    "kind": "mcq",
+    "topic": "Core Python",
+    "prompt": "What does the `zip()` function do?",
+    "options": [
+      "Compresses a file",
+      "Combines two or more iterables into an iterator of tuples",
+      "Filters elements",
+      "Maps a function to elements"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q18",
+    "kind": "mcq",
+    "topic": "OOP in Python",
+    "prompt": "What is multiple inheritance in Python?",
+    "options": [
+      "Having multiple instances of a class",
+      "A class inheriting from more than one parent class",
+      "A class having multiple constructors",
+      "Overloading methods"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q19",
+    "kind": "mcq",
+    "topic": "Memory Management",
+    "prompt": "When does Python's garbage collector delete an object?",
+    "options": [
+      "When the program ends",
+      "When reference count drops to zero",
+      "After every function call",
+      "Every 60 seconds"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q20",
+    "kind": "mcq",
+    "topic": "Core Python",
+    "prompt": "What is a Python module?",
+    "options": [
+      "A class with methods",
+      "A file containing Python code that can be imported",
+      "A built-in function",
+      "A type of loop"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q21",
+    "kind": "code",
+    "topic": "Algorithms",
+    "prompt": "Write a function `fibonacci(n)` that returns the nth Fibonacci number. The sequence starts: 0, 1, 1, 2, 3, 5, 8...",
+    "language": "javascript",
+    "starterCode": "function fibonacci(n) {\n  // your code here\n}",
+    "testCases": [
+      {
+        "input": "0",
+        "expectedOutput": "0"
+      },
+      {
+        "input": "5",
+        "expectedOutput": "5"
+      },
+      {
+        "input": "10",
+        "expectedOutput": "55"
+      }
+    ],
+    "difficulty": 2
+  }
+]

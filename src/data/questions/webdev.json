@@ -1,0 +1,281 @@
+[
+  {
+    "id": "q1",
+    "kind": "mcq",
+    "topic": "HTML",
+    "prompt": "What is the purpose of the `<semantic>` elements like `<article>` and `<section>` in HTML5?",
+    "options": [
+      "To add styling",
+      "To improve SEO and accessibility by conveying meaning to browsers and screen readers",
+      "To create animations",
+      "To add JavaScript"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q2",
+    "kind": "mcq",
+    "topic": "CSS",
+    "prompt": "What is CSS specificity?",
+    "options": [
+      "The speed of CSS rendering",
+      "A ranking system that determines which CSS rule is applied when multiple rules target the same element",
+      "The number of CSS files",
+      "The order of CSS properties"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q3",
+    "kind": "mcq",
+    "topic": "CSS",
+    "prompt": "What does `display: flex` do?",
+    "options": [
+      "Makes an element visible",
+      "Enables the Flexbox layout model, making the element a flex container",
+      "Makes an element float",
+      "Hides an element"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q4",
+    "kind": "mcq",
+    "topic": "JavaScript",
+    "prompt": "What is the JavaScript Event Loop?",
+    "options": [
+      "A loop that iterates over events in an array",
+      "The mechanism that handles asynchronous operations by monitoring the call stack and task queue",
+      "A method to create event listeners",
+      "A for loop for DOM events"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q5",
+    "kind": "mcq",
+    "topic": "JavaScript",
+    "prompt": "What is a closure in JavaScript?",
+    "options": [
+      "Closing a browser window",
+      "A function that retains access to its outer (enclosing) scope even after the outer function has returned",
+      "A type of loop",
+      "An object method"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q6",
+    "kind": "mcq",
+    "topic": "JavaScript",
+    "prompt": "What does `Promise.all()` do?",
+    "options": [
+      "Resolves the first promise that settles",
+      "Waits for all promises to resolve and returns an array of results; rejects if any promise rejects",
+      "Runs promises sequentially",
+      "Cancels all pending promises"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q7",
+    "kind": "mcq",
+    "topic": "React",
+    "prompt": "What is the purpose of `useEffect` in React?",
+    "options": [
+      "To create state variables",
+      "To handle side effects such as data fetching, subscriptions, or DOM manipulation after render",
+      "To optimize renders",
+      "To create context"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q8",
+    "kind": "mcq",
+    "topic": "React",
+    "prompt": "What is the Virtual DOM in React?",
+    "options": [
+      "A copy of the server-side DOM",
+      "A lightweight in-memory representation of the real DOM that React uses to optimize updates",
+      "A 3D rendering engine",
+      "A CSS-in-JS solution"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q9",
+    "kind": "mcq",
+    "topic": "APIs",
+    "prompt": "What does REST stand for?",
+    "options": [
+      "Rapid Encoding State Transfer",
+      "Representational State Transfer",
+      "Remote Execution Service Technology",
+      "Resource Endpoint Standard Transfer"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q10",
+    "kind": "mcq",
+    "topic": "APIs",
+    "prompt": "Which HTTP method is idempotent and used to retrieve data?",
+    "options": [
+      "POST",
+      "DELETE",
+      "PUT",
+      "GET"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "q11",
+    "kind": "mcq",
+    "topic": "JavaScript",
+    "prompt": "What is the difference between `let`, `const`, and `var`?",
+    "options": [
+      "They are identical",
+      "var is function-scoped; let and const are block-scoped; const cannot be reassigned",
+      "let is global; const is local",
+      "var cannot be reassigned"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q12",
+    "kind": "mcq",
+    "topic": "CSS",
+    "prompt": "What is the CSS Box Model?",
+    "options": [
+      "A 3D design pattern",
+      "A model describing how elements are rendered with content, padding, border, and margin",
+      "A CSS animation technique",
+      "A color management system"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q13",
+    "kind": "mcq",
+    "topic": "React",
+    "prompt": "What is `useState` in React?",
+    "options": [
+      "A lifecycle method",
+      "A hook that allows functional components to manage local state",
+      "A class-based state manager",
+      "A routing hook"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q14",
+    "kind": "mcq",
+    "topic": "JavaScript",
+    "prompt": "What does `async/await` do in JavaScript?",
+    "options": [
+      "Creates parallel threads",
+      "Provides syntactic sugar over Promises to write asynchronous code in a synchronous style",
+      "Makes code run faster",
+      "Prevents race conditions"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q15",
+    "kind": "mcq",
+    "topic": "HTML",
+    "prompt": "What is the purpose of the `meta viewport` tag in HTML?",
+    "options": [
+      "To define the page author",
+      "To control how the page is displayed on mobile devices (responsive design)",
+      "To set the page title",
+      "To include external scripts"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q16",
+    "kind": "mcq",
+    "topic": "APIs",
+    "prompt": "What is CORS?",
+    "options": [
+      "A CSS framework",
+      "A security feature that controls which origins can access resources from a different origin",
+      "A JavaScript module system",
+      "A database protocol"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q17",
+    "kind": "mcq",
+    "topic": "React",
+    "prompt": "What is prop drilling in React?",
+    "options": [
+      "A performance optimization",
+      "Passing props through multiple levels of components that don't need them just to reach a deeply nested component",
+      "A security issue",
+      "A React Native feature"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q18",
+    "kind": "mcq",
+    "topic": "JavaScript",
+    "prompt": "What does `JSON.stringify()` do?",
+    "options": [
+      "Parses a JSON string into a JavaScript object",
+      "Converts a JavaScript value to a JSON string",
+      "Validates JSON syntax",
+      "Formats JSON for display"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q19",
+    "kind": "mcq",
+    "topic": "CSS",
+    "prompt": "What is the difference between `position: absolute` and `position: relative`?",
+    "options": [
+      "They are the same",
+      "absolute is positioned relative to its nearest positioned ancestor; relative is offset from its normal position",
+      "absolute stays fixed on screen",
+      "relative is for animations only"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q20",
+    "kind": "mcq",
+    "topic": "React",
+    "prompt": "What is the purpose of `key` prop when rendering lists in React?",
+    "options": [
+      "It is used for styling",
+      "It helps React identify which items have changed, been added, or removed for efficient re-rendering",
+      "It sets the element's ID",
+      "It marks an element as interactive"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q21",
+    "kind": "code",
+    "topic": "JavaScript",
+    "prompt": "Write a function `fizzBuzz(n)` that returns an array of strings from 1 to n. For multiples of 3 use 'Fizz', for multiples of 5 use 'Buzz', for both use 'FizzBuzz', otherwise the number as a string.",
+    "language": "javascript",
+    "starterCode": "function fizzBuzz(n) {\n  // your code here\n}",
+    "testCases": [
+      {
+        "input": "5",
+        "expectedOutput": "[\"1\",\"2\",\"Fizz\",\"4\",\"Buzz\"]"
+      },
+      {
+        "input": "15",
+        "expectedOutput": "[\"1\",\"2\",\"Fizz\",\"4\",\"Buzz\",\"Fizz\",\"7\",\"8\",\"Fizz\",\"Buzz\",\"11\",\"Fizz\",\"13\",\"14\",\"FizzBuzz\"]"
+      }
+    ],
+    "difficulty": 2
+  }
+]

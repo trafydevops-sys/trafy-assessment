@@ -1,0 +1,285 @@
+[
+  {
+    "id": "q1",
+    "kind": "mcq",
+    "topic": "JVM Architecture",
+    "prompt": "What is the JVM responsible for?",
+    "options": [
+      "Compiling Java source code to bytecode",
+      "Executing Java bytecode on any platform",
+      "Storing Java class definitions",
+      "Managing IDE plugins"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q2",
+    "kind": "mcq",
+    "topic": "JVM Architecture",
+    "prompt": "What is bytecode in Java?",
+    "options": [
+      "Native machine code",
+      "Intermediate compiled code that runs on the JVM",
+      "Source code with comments",
+      "Encrypted Java code"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q3",
+    "kind": "mcq",
+    "topic": "Collections Framework",
+    "prompt": "Which Java collection maintains insertion order and allows duplicates?",
+    "options": [
+      "HashSet",
+      "TreeSet",
+      "ArrayList",
+      "LinkedHashSet"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q4",
+    "kind": "mcq",
+    "topic": "Collections Framework",
+    "prompt": "What is the difference between HashMap and TreeMap in Java?",
+    "options": [
+      "HashMap is thread-safe, TreeMap is not",
+      "TreeMap maintains sorted key order; HashMap does not guarantee order",
+      "HashMap is slower",
+      "TreeMap allows null keys"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q5",
+    "kind": "mcq",
+    "topic": "Multithreading",
+    "prompt": "Which keyword in Java is used to prevent multiple threads from executing a block of code simultaneously?",
+    "options": [
+      "volatile",
+      "atomic",
+      "synchronized",
+      "static"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q6",
+    "kind": "mcq",
+    "topic": "Multithreading",
+    "prompt": "What is a race condition in Java multithreading?",
+    "options": [
+      "When two threads race in terms of CPU speed",
+      "When multiple threads access shared data concurrently, leading to inconsistent results",
+      "A compile-time error",
+      "A JVM crash"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q7",
+    "kind": "mcq",
+    "topic": "Exception Handling",
+    "prompt": "Which of the following is a checked exception in Java?",
+    "options": [
+      "NullPointerException",
+      "ArrayIndexOutOfBoundsException",
+      "IOException",
+      "ArithmeticException"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q8",
+    "kind": "mcq",
+    "topic": "Exception Handling",
+    "prompt": "What does the `finally` block do in Java?",
+    "options": [
+      "Executes only when an exception occurs",
+      "Executes only when no exception occurs",
+      "Always executes after try/catch regardless of whether an exception occurred",
+      "Catches all exceptions"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q9",
+    "kind": "mcq",
+    "topic": "OOP in Java",
+    "prompt": "What is the purpose of the `interface` keyword in Java?",
+    "options": [
+      "To define a class that cannot be instantiated",
+      "To define a contract that classes must implement",
+      "To create a singleton",
+      "To mark abstract methods only"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q10",
+    "kind": "mcq",
+    "topic": "OOP in Java",
+    "prompt": "What is method overloading in Java?",
+    "options": [
+      "Overriding a parent method",
+      "Defining multiple methods with the same name but different parameters in the same class",
+      "Using a method from an interface",
+      "Calling super class methods"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q11",
+    "kind": "mcq",
+    "topic": "JVM Architecture",
+    "prompt": "What does the Garbage Collector do in Java?",
+    "options": [
+      "Cleans up syntax errors",
+      "Automatically frees memory occupied by unreachable objects",
+      "Manages database connections",
+      "Optimizes CPU usage"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q12",
+    "kind": "mcq",
+    "topic": "Collections Framework",
+    "prompt": "Which interface does ArrayList implement?",
+    "options": [
+      "Map",
+      "Set",
+      "List",
+      "Queue"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q13",
+    "kind": "mcq",
+    "topic": "Multithreading",
+    "prompt": "What is a deadlock in Java multithreading?",
+    "options": [
+      "An infinite loop",
+      "A situation where two threads wait indefinitely for locks held by each other",
+      "A thread consuming too much CPU",
+      "A NullPointerException in a thread"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q14",
+    "kind": "mcq",
+    "topic": "OOP in Java",
+    "prompt": "What does the `abstract` keyword mean on a class?",
+    "options": [
+      "The class can only have static methods",
+      "The class cannot be instantiated and may have abstract methods",
+      "The class is immutable",
+      "The class extends Object directly"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q15",
+    "kind": "mcq",
+    "topic": "JVM Architecture",
+    "prompt": "What is the purpose of the `static` keyword in Java?",
+    "options": [
+      "Makes a method immutable",
+      "Declares a class-level variable or method shared across all instances",
+      "Makes a method private",
+      "Prevents inheritance"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q16",
+    "kind": "mcq",
+    "topic": "Exception Handling",
+    "prompt": "What happens if you catch `Exception` before `IOException` in a multi-catch?",
+    "options": [
+      "The code compiles and works normally",
+      "It will cause a compile-time error because the more specific exception is unreachable",
+      "Only IOException is caught",
+      "The JVM ignores both"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q17",
+    "kind": "mcq",
+    "topic": "Collections Framework",
+    "prompt": "Which Java collection is best for FIFO (First-In, First-Out) operations?",
+    "options": [
+      "Stack",
+      "LinkedList as Queue",
+      "TreeMap",
+      "PriorityQueue"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q18",
+    "kind": "mcq",
+    "topic": "OOP in Java",
+    "prompt": "What is the difference between `==` and `.equals()` in Java?",
+    "options": [
+      "They are identical",
+      "== checks reference equality; .equals() checks logical/value equality",
+      "== checks value; .equals() checks reference",
+      "Only primitives use =="
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q19",
+    "kind": "mcq",
+    "topic": "Multithreading",
+    "prompt": "Which class in Java is used to create a thread by implementing an interface?",
+    "options": [
+      "Thread",
+      "Process",
+      "Runnable",
+      "Callable"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q20",
+    "kind": "mcq",
+    "topic": "JVM Architecture",
+    "prompt": "What is Just-In-Time (JIT) compilation?",
+    "options": [
+      "Compiling Java code at install time",
+      "Compiling bytecode to native machine code at runtime for performance",
+      "Pre-compiling Java to C++",
+      "Compiling code in a separate thread"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q21",
+    "kind": "code",
+    "topic": "Algorithms",
+    "prompt": "Write a function `isPalindrome(s)` that returns `true` if the string is a palindrome (reads the same forwards and backwards), and `false` otherwise. Ignore case.",
+    "language": "javascript",
+    "starterCode": "function isPalindrome(s) {\n  // your code here\n}",
+    "testCases": [
+      {
+        "input": "'racecar'",
+        "expectedOutput": "true"
+      },
+      {
+        "input": "'hello'",
+        "expectedOutput": "false"
+      },
+      {
+        "input": "'Madam'",
+        "expectedOutput": "true"
+      }
+    ],
+    "difficulty": 1
+  }
+]

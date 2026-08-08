@@ -1,0 +1,285 @@
+[
+  {
+    "id": "q1",
+    "kind": "mcq",
+    "topic": "Pointers",
+    "prompt": "What does the `*` operator do when used in a pointer declaration?",
+    "options": [
+      "Multiplies two numbers",
+      "Declares a pointer variable",
+      "Dereferences a pointer",
+      "Both A and C depending on context"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q2",
+    "kind": "mcq",
+    "topic": "Pointers",
+    "prompt": "What is a null pointer?",
+    "options": [
+      "A pointer that points to memory address 0",
+      "A pointer that holds garbage value",
+      "A pointer to an integer zero",
+      "A pointer that has been deleted"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "q3",
+    "kind": "mcq",
+    "topic": "Memory Management",
+    "prompt": "Which operator is used to dynamically allocate memory in C++?",
+    "options": [
+      "malloc",
+      "alloc",
+      "new",
+      "create"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q4",
+    "kind": "mcq",
+    "topic": "Memory Management",
+    "prompt": "What is a memory leak in C++?",
+    "options": [
+      "Accessing memory out of bounds",
+      "Dynamically allocated memory that is never freed",
+      "Declaring too many variables",
+      "Stack overflow"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q5",
+    "kind": "mcq",
+    "topic": "STL",
+    "prompt": "Which STL container provides O(1) average time for insertion and lookup?",
+    "options": [
+      "std::vector",
+      "std::list",
+      "std::unordered_map",
+      "std::set"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q6",
+    "kind": "mcq",
+    "topic": "STL",
+    "prompt": "What does `std::vector::push_back()` do?",
+    "options": [
+      "Inserts an element at the beginning",
+      "Removes the last element",
+      "Adds an element to the end",
+      "Sorts the vector"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q7",
+    "kind": "mcq",
+    "topic": "OOP in C++",
+    "prompt": "What is a virtual function in C++?",
+    "options": [
+      "A function without a body",
+      "A function that can be overridden in derived classes to support runtime polymorphism",
+      "A private member function",
+      "A function in a template class"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q8",
+    "kind": "mcq",
+    "topic": "OOP in C++",
+    "prompt": "What is a copy constructor?",
+    "options": [
+      "A constructor that takes no arguments",
+      "A constructor that initializes an object using another object of the same class",
+      "A constructor that uses references",
+      "A static constructor"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q9",
+    "kind": "mcq",
+    "topic": "Templates",
+    "prompt": "What is the purpose of templates in C++?",
+    "options": [
+      "To provide GUI templates",
+      "To allow writing generic functions and classes that work with any data type",
+      "To define abstract classes",
+      "To manage memory automatically"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q10",
+    "kind": "mcq",
+    "topic": "OOP in C++",
+    "prompt": "Which keyword is used to prevent a class from being inherited in C++?",
+    "options": [
+      "static",
+      "const",
+      "final",
+      "sealed"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q11",
+    "kind": "mcq",
+    "topic": "Memory Management",
+    "prompt": "What does the destructor do in C++?",
+    "options": [
+      "Allocates memory",
+      "Initializes objects",
+      "Releases resources when an object goes out of scope",
+      "Copies an object"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q12",
+    "kind": "mcq",
+    "topic": "STL",
+    "prompt": "Which STL algorithm sorts a range in ascending order?",
+    "options": [
+      "std::find",
+      "std::sort",
+      "std::count",
+      "std::accumulate"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q13",
+    "kind": "mcq",
+    "topic": "Pointers",
+    "prompt": "What is the difference between a pointer and a reference in C++?",
+    "options": [
+      "There is no difference",
+      "A pointer can be null and reassigned; a reference cannot be null and must be initialized",
+      "References are faster",
+      "Pointers are for integers only"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q14",
+    "kind": "mcq",
+    "topic": "OOP in C++",
+    "prompt": "What is operator overloading in C++?",
+    "options": [
+      "Using too many operators",
+      "Defining custom behavior for operators when applied to user-defined types",
+      "Replacing arithmetic operations",
+      "Overriding logical operators only"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q15",
+    "kind": "mcq",
+    "topic": "Memory Management",
+    "prompt": "What is RAII in C++?",
+    "options": [
+      "Random Access Indexed Iteration",
+      "Resource Acquisition Is Initialization – ties resource lifetime to object lifetime",
+      "A garbage collection method",
+      "A type of smart pointer"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q16",
+    "kind": "mcq",
+    "topic": "STL",
+    "prompt": "What is the time complexity of `std::map` insertion?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q17",
+    "kind": "mcq",
+    "topic": "Templates",
+    "prompt": "What is template specialization?",
+    "options": [
+      "Creating a template for GUI forms",
+      "Providing a specific implementation of a template for a particular data type",
+      "Using templates only for integers",
+      "Inheriting from a template class"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q18",
+    "kind": "mcq",
+    "topic": "OOP in C++",
+    "prompt": "What is a pure virtual function?",
+    "options": [
+      "A function without parameters",
+      "A virtual function with no implementation, making the class abstract",
+      "A private virtual function",
+      "A function called at compile time"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q19",
+    "kind": "mcq",
+    "topic": "Memory Management",
+    "prompt": "Which smart pointer in C++ ensures unique ownership of a resource?",
+    "options": [
+      "std::shared_ptr",
+      "std::weak_ptr",
+      "std::unique_ptr",
+      "std::auto_ptr"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q20",
+    "kind": "mcq",
+    "topic": "STL",
+    "prompt": "What does `std::stack` internally use by default?",
+    "options": [
+      "std::vector",
+      "std::list",
+      "std::deque",
+      "std::array"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "q21",
+    "kind": "code",
+    "topic": "Algorithms",
+    "prompt": "Write a function `reverseString(s)` that takes a string and returns it reversed. Example: 'hello' → 'olleh'.",
+    "language": "javascript",
+    "starterCode": "function reverseString(s) {\n  // your code here\n}",
+    "testCases": [
+      {
+        "input": "'hello'",
+        "expectedOutput": "\"olleh\""
+      },
+      {
+        "input": "'trafy'",
+        "expectedOutput": "\"yfart\""
+      },
+      {
+        "input": "'abcd'",
+        "expectedOutput": "\"dcba\""
+      }
+    ],
+    "difficulty": 1
+  }
+]

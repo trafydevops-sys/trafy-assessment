@@ -1,0 +1,285 @@
+[
+  {
+    "id": "q1",
+    "kind": "mcq",
+    "topic": "Machine Learning Basics",
+    "prompt": "What is supervised learning?",
+    "options": [
+      "Training a model without any data",
+      "Learning where the model is trained on labeled input-output pairs",
+      "Learning where the algorithm explores on its own",
+      "Training using only images"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q2",
+    "kind": "mcq",
+    "topic": "Machine Learning Basics",
+    "prompt": "What is overfitting in a machine learning model?",
+    "options": [
+      "The model performs poorly on training data",
+      "The model learns the training data too well, including noise, and performs poorly on new data",
+      "The model is too simple",
+      "Having too many features"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q3",
+    "kind": "mcq",
+    "topic": "Neural Networks",
+    "prompt": "What is an activation function in a neural network?",
+    "options": [
+      "A function that initializes weights",
+      "A function applied to neuron outputs to introduce non-linearity",
+      "A loss function",
+      "A regularization technique"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q4",
+    "kind": "mcq",
+    "topic": "Neural Networks",
+    "prompt": "What is backpropagation?",
+    "options": [
+      "Running the neural network forward",
+      "The algorithm for computing gradients to update weights by propagating error backward through the network",
+      "Preprocessing training data",
+      "Evaluating model accuracy"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q5",
+    "kind": "mcq",
+    "topic": "Gradient Descent",
+    "prompt": "What does the learning rate control in gradient descent?",
+    "options": [
+      "The number of training samples",
+      "The step size taken when updating model weights during training",
+      "The number of layers in a network",
+      "The activation function used"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q6",
+    "kind": "mcq",
+    "topic": "Gradient Descent",
+    "prompt": "What is the problem with a learning rate that is too high?",
+    "options": [
+      "Training becomes too slow",
+      "The model may overshoot the optimal solution and fail to converge",
+      "The model always underfits",
+      "It has no effect on training"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q7",
+    "kind": "mcq",
+    "topic": "NLP Basics",
+    "prompt": "What is tokenization in NLP?",
+    "options": [
+      "Converting numbers to text",
+      "The process of splitting text into smaller units like words or subwords",
+      "Translating text to another language",
+      "Classifying text into categories"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q8",
+    "kind": "mcq",
+    "topic": "NLP Basics",
+    "prompt": "What does TF-IDF measure?",
+    "options": [
+      "Translation frequency",
+      "The importance of a word in a document relative to a collection of documents",
+      "The length of a sentence",
+      "Grammar correctness"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q9",
+    "kind": "mcq",
+    "topic": "Computer Vision",
+    "prompt": "What is a Convolutional Neural Network (CNN) primarily used for?",
+    "options": [
+      "Time series prediction",
+      "Processing grid-like data such as images by learning spatial features",
+      "Natural language understanding",
+      "Reinforcement learning"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q10",
+    "kind": "mcq",
+    "topic": "Machine Learning Basics",
+    "prompt": "What is the purpose of a validation set?",
+    "options": [
+      "To train the model",
+      "To tune hyperparameters and evaluate model performance during training without touching the test set",
+      "To augment training data",
+      "To store model weights"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q11",
+    "kind": "mcq",
+    "topic": "Machine Learning Basics",
+    "prompt": "What is regularization used for?",
+    "options": [
+      "Speeding up training",
+      "Reducing overfitting by adding a penalty to large model weights",
+      "Normalizing input data",
+      "Increasing model complexity"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q12",
+    "kind": "mcq",
+    "topic": "Neural Networks",
+    "prompt": "What is a dropout layer used for in neural networks?",
+    "options": [
+      "Removing neurons permanently",
+      "Randomly deactivating neurons during training to reduce overfitting",
+      "Adding more neurons",
+      "Normalizing layer outputs"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q13",
+    "kind": "mcq",
+    "topic": "Gradient Descent",
+    "prompt": "What is the difference between batch gradient descent and stochastic gradient descent?",
+    "options": [
+      "There is no difference",
+      "Batch uses all training data per update; SGD uses one sample per update",
+      "SGD is slower",
+      "Batch gradient descent doesn't use gradients"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q14",
+    "kind": "mcq",
+    "topic": "Machine Learning Basics",
+    "prompt": "What does the confusion matrix measure?",
+    "options": [
+      "Model training speed",
+      "The performance of a classification model showing true/false positives and negatives",
+      "Feature importance",
+      "Training data size"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q15",
+    "kind": "mcq",
+    "topic": "NLP Basics",
+    "prompt": "What is word embedding?",
+    "options": [
+      "Hiding words in code",
+      "Representing words as dense real-valued vectors in a continuous vector space where similar words have similar vectors",
+      "Tokenizing sentences",
+      "Counting word frequency"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q16",
+    "kind": "mcq",
+    "topic": "Machine Learning Basics",
+    "prompt": "What is the difference between classification and regression?",
+    "options": [
+      "There is no difference",
+      "Classification predicts discrete class labels; regression predicts continuous numerical values",
+      "Regression is for images",
+      "Classification uses neural networks only"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q17",
+    "kind": "mcq",
+    "topic": "Computer Vision",
+    "prompt": "What is transfer learning in computer vision?",
+    "options": [
+      "Copying data between computers",
+      "Using a model pre-trained on a large dataset as a starting point for a new task",
+      "Training from scratch",
+      "Moving model weights to GPU"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q18",
+    "kind": "mcq",
+    "topic": "Neural Networks",
+    "prompt": "What is the ReLU activation function?",
+    "options": [
+      "f(x) = 1/(1+e^(-x))",
+      "f(x) = max(0, x)",
+      "f(x) = tanh(x)",
+      "f(x) = x²"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q19",
+    "kind": "mcq",
+    "topic": "Machine Learning Basics",
+    "prompt": "What is cross-validation?",
+    "options": [
+      "Comparing two different models",
+      "A technique to assess model generalization by training and evaluating on different subsets of the data",
+      "A data preprocessing step",
+      "A type of regularization"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q20",
+    "kind": "mcq",
+    "topic": "NLP Basics",
+    "prompt": "What is a transformer model in NLP?",
+    "options": [
+      "An electrical component",
+      "A neural network architecture using self-attention mechanisms, powering models like BERT and GPT",
+      "A type of RNN",
+      "A tokenization method"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "q21",
+    "kind": "code",
+    "topic": "Mathematics for AI",
+    "prompt": "Write a function `meanSquaredError(yTrue, yPred)` that calculates the Mean Squared Error between two arrays of numbers. MSE = average of (yTrue[i] - yPred[i])^2.",
+    "language": "javascript",
+    "starterCode": "function meanSquaredError(yTrue, yPred) {\n  // your code here\n}",
+    "testCases": [
+      {
+        "input": "[1,2,3], [1,2,3]",
+        "expectedOutput": "0"
+      },
+      {
+        "input": "[1,2,3], [2,3,4]",
+        "expectedOutput": "1"
+      },
+      {
+        "input": "[0,0], [1,1]",
+        "expectedOutput": "1"
+      }
+    ],
+    "difficulty": 2
+  }
+]
