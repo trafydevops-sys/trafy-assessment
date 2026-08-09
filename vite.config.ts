@@ -49,8 +49,7 @@ export default defineConfig(({ mode }) => {
                     html: `
                       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #0d0b28; color: #ffffff; padding: 32px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
                         <div style="text-align: center; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                          <div style="display: inline-block; background: #4c56e8; color: #ffffff; width: 36px; height: 36px; line-height: 36px; border-radius: 8px; font-weight: bold; font-size: 20px;">T</div>
-                          <h2 style="margin: 12px 0 0; color: #ffffff; font-size: 22px;">Trafy Assessment Report</h2>
+                          <h2 style="margin: 0; color: #ffffff; font-size: 22px;">Trafy Assessment Report</h2>
                         </div>
                         
                         <div style="padding: 24px 0;">

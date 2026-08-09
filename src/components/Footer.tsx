@@ -3,7 +3,6 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-ink py-12">
       <div className="mx-auto max-w-7xl px-6 flex flex-col items-center justify-center gap-4">
         <div className="flex items-center gap-2">
-          <div className="flex items-center justify-center h-6 w-6 bg-green-hard rounded-md font-bold text-white text-xs">T</div>
           <span className="font-display font-bold tracking-tight text-white">Trafy</span>
         </div>
         <p className="text-sm text-white/50 text-center max-w-md">
