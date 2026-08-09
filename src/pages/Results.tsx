@@ -82,7 +82,14 @@ export default function Results() {
           assessmentId,
           score: calculatedScore,
           total: calculatedTotal,
-          percentage: computedPct
+          percentage: computedPct,
+          results: computedResults.map((r) => ({
+            id: r.id,
+            prompt: r.prompt,
+            topic: r.topic,
+            kind: r.kind,
+            isCorrect: r.isCorrect
+          }))
         });
       }
     }

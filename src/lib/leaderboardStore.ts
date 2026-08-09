@@ -159,39 +159,28 @@ export async function recordAssessmentResult(params: {
           completed_at: new Date().toISOString()
         });
 
-        await supabase.functions.invoke("send-score", {
+        const { data: emailData, error: emailErr } = await supabase.functions.invoke("send-score", {
           body: {
-            name: candidate.name,
+            name: candidate.name || "Candidate",
             email: candidate.email,
-            score: percentage,
-            assessmentTitle: trackName
+            score,
+            total,
+            percentage,
+            assessmentTitle: trackName,
+            results
           }
         });
+
+        if (emailErr) {
+          console.warn("PDF report email failed to send:", emailErr);
+        } else if (emailData?.error) {
+          console.warn("Resend rejected the report email:", emailData.error?.message || emailData.error);
+        } else {
+          console.log("✓ PDF score report emailed via Resend!");
+        }
       }
     } catch (err) {
       console.warn("Supabase record failed:", err);
     }
-  }
-
-  // 3. Trigger email send via secure local server-side proxy
-  try {
-    const res = await fetch("/api/send-score-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: candidate.name || "Candidate",
-        email: candidate.email || "build.trafy@gmail.com",
-        score: percentage,
-        assessmentTitle: trackName
-      })
-    });
-    if (res.ok) {
-      console.log("✓ Score report email dispatched via Resend API!");
-    } else {
-      const errData = await res.json();
-      console.warn("Resend email dispatch note:", errData?.error || errData);
-    }
-  } catch (e) {
-    console.warn("Dev email proxy call note:", e);
   }
 }
