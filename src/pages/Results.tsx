@@ -142,7 +142,15 @@ export default function Results() {
             </div>
             <div className="rounded-2xl bg-white/5 px-6 py-4 border border-white/10">
               <div className="text-sm text-white/60">Percentile</div>
-              <div className="text-2xl font-bold text-white">Top 12%</div>
+              <div className="text-2xl font-bold text-white">
+                {percentage >= 95 ? "Top 1%" : 
+                 percentage >= 90 ? "Top 5%" : 
+                 percentage >= 80 ? "Top 12%" : 
+                 percentage >= 70 ? "Top 20%" : 
+                 percentage >= 60 ? "Top 35%" : 
+                 percentage >= 50 ? "Top 50%" : 
+                 `Top ${Math.min(95, Math.round(100 - percentage * 0.5))}%`}
+              </div>
             </div>
           </div>
         </div>

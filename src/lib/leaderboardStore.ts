@@ -98,8 +98,9 @@ export async function recordAssessmentResult(params: {
   score: number;
   total: number;
   percentage: number;
+  results?: { id?: string; prompt?: string; topic?: string; kind?: string; isCorrect?: boolean }[];
 }): Promise<void> {
-  const { candidate, assessmentId, score, total, percentage } = params;
+  const { candidate, assessmentId, score, total, percentage, results } = params;
   const trackName = TRACK_NAMES[assessmentId] || assessmentId;
   const dateStr = new Date().toISOString().split("T")[0];
 

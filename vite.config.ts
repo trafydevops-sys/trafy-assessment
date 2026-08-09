@@ -64,7 +64,7 @@ export default defineConfig(({ mode }) => {
                             <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.5); font-weight: 600;">Overall Score</div>
                             <div style="font-size: 56px; font-weight: 800; color: #ff5ec4; margin: 8px 0; font-family: sans-serif;">${score}%</div>
                             <div style="display: inline-block; background: #4c56e8; color: #ffffff; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600;">
-                              Top 12% Percentile Candidate
+                              ${Number(score) >= 95 ? "Top 1%" : Number(score) >= 90 ? "Top 5%" : Number(score) >= 80 ? "Top 12%" : Number(score) >= 70 ? "Top 20%" : Number(score) >= 60 ? "Top 35%" : "Top 50%"} Percentile Candidate
                             </div>
                           </div>
 
