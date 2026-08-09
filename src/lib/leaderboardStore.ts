@@ -18,14 +18,7 @@ export const TRACK_NAMES: Record<string, string> = {
   "aiml": "AI & Machine Learning"
 };
 
-const SEED_LEADERBOARD: LeaderboardEntry[] = [
-  { id: "seed-1", name: "Aarav K.", score: 98, track: "Core Computer Science", date: "2026-08-07" },
-  { id: "seed-2", name: "Priya S.", score: 95, track: "C++ Programming", date: "2026-08-06" },
-  { id: "seed-3", name: "Rahul D.", score: 92, track: "Python Programming", date: "2026-08-08" },
-  { id: "seed-4", name: "Neha M.", score: 88, track: "Web Development", date: "2026-08-05" },
-  { id: "seed-5", name: "Rohan J.", score: 85, track: "AI & Machine Learning", date: "2026-08-08" },
-];
-
+const SEED_LEADERBOARD: LeaderboardEntry[] = [];
 const LOCAL_KEY = "trafy_leaderboard_entries";
 
 export function getLocalLeaderboard(): LeaderboardEntry[] {
@@ -36,11 +29,13 @@ export function getLocalLeaderboard(): LeaderboardEntry[] {
     // Combine custom user submissions with seed entries
     const combined = [...customEntries, ...SEED_LEADERBOARD];
     
-    // Deduplicate by ID
+    // Deduplicate by Candidate Name + Track (keep candidate's highest score per track)
     const uniqueMap = new Map<string, LeaderboardEntry>();
     for (const item of combined) {
-      if (!uniqueMap.has(item.id)) {
-        uniqueMap.set(item.id, item);
+      const key = `${(item.name || "").trim().toLowerCase()}_${item.track}`;
+      const existing = uniqueMap.get(key);
+      if (!existing || item.score > existing.score) {
+        uniqueMap.set(key, item);
       }
     }
     
@@ -68,7 +63,7 @@ export async function fetchLeaderboard(): Promise<LeaderboardEntry[]> {
         .limit(50);
 
       if (!error && data && data.length > 0) {
-        return data.map((row: any) => ({
+        const rawEntries = data.map((row: any) => ({
           id: row.id,
           name: row.candidates?.name || "Anonymous",
           score: Math.round(Number(row.percentage) || 0),
@@ -76,6 +71,18 @@ export async function fetchLeaderboard(): Promise<LeaderboardEntry[]> {
           date: row.completed_at ? new Date(row.completed_at).toISOString().split("T")[0] : new Date().toISOString().split("T")[0],
           email: row.candidates?.email
         }));
+
+        // Deduplicate by Name + Track
+        const uniqueMap = new Map<string, LeaderboardEntry>();
+        for (const item of rawEntries) {
+          const key = `${(item.name || "").trim().toLowerCase()}_${item.track}`;
+          const existing = uniqueMap.get(key);
+          if (!existing || item.score > existing.score) {
+            uniqueMap.set(key, item);
+          }
+        }
+
+        return Array.from(uniqueMap.values()).sort((a, b) => b.score - a.score);
       }
     } catch (e) {
       console.warn("Supabase fetch failed, falling back to local store", e);
@@ -105,13 +112,23 @@ export async function recordAssessmentResult(params: {
     email: candidate.email
   };
 
-  // 1. Save to localStorage immediately
+  // 1. Save to localStorage with deduplication (keep highest score per candidate per track)
   try {
     const raw = localStorage.getItem(LOCAL_KEY);
     const existing: LeaderboardEntry[] = raw ? JSON.parse(raw) : [];
-    // Replace if same email & track exists with higher/lower score, or push new
-    const updated = [newEntry, ...existing];
-    localStorage.setItem(LOCAL_KEY, JSON.stringify(updated));
+    
+    const combined = [newEntry, ...existing];
+    const uniqueMap = new Map<string, LeaderboardEntry>();
+    for (const item of combined) {
+      const key = `${(item.name || "").trim().toLowerCase()}_${item.track}`;
+      const prev = uniqueMap.get(key);
+      if (!prev || item.score >= prev.score) {
+        uniqueMap.set(key, item);
+      }
+    }
+
+    const deduplicated = Array.from(uniqueMap.values());
+    localStorage.setItem(LOCAL_KEY, JSON.stringify(deduplicated));
     window.dispatchEvent(new Event("trafy_leaderboard_updated"));
   } catch (e) {
     console.error("Failed to save local result", e);
@@ -120,7 +137,6 @@ export async function recordAssessmentResult(params: {
   // 2. Save to Supabase if configured
   if (isSupabaseConfigured && supabase) {
     try {
-      // Insert candidate
       const { data: candidateData, error: candErr } = await supabase
         .from("candidates")
         .insert({
@@ -133,7 +149,6 @@ export async function recordAssessmentResult(params: {
         .single();
 
       if (!candErr && candidateData) {
-        // Insert session
         await supabase.from("sessions").insert({
           candidate_id: candidateData.id,
           assessment_id: assessmentId,
@@ -143,7 +158,6 @@ export async function recordAssessmentResult(params: {
           completed_at: new Date().toISOString()
         });
 
-        // Trigger email edge function
         await supabase.functions.invoke("send-score", {
           body: {
             name: candidate.name,

@@ -73,14 +73,18 @@ export default function Results() {
       const computedPct = Math.round((calculatedScore / calculatedTotal) * 100);
       setPercentage(computedPct);
       
-      const userObj = savedUser ? JSON.parse(savedUser) : { name: "Candidate", email: "candidate@example.com" };
-      recordAssessmentResult({
-        candidate: userObj,
-        assessmentId,
-        score: calculatedScore,
-        total: calculatedTotal,
-        percentage: computedPct
-      });
+      const recordKey = `recorded_${assessmentId}_${savedAns.length}`;
+      if (!sessionStorage.getItem(recordKey)) {
+        sessionStorage.setItem(recordKey, "true");
+        const userObj = savedUser ? JSON.parse(savedUser) : { name: "Candidate", email: "candidate@example.com" };
+        recordAssessmentResult({
+          candidate: userObj,
+          assessmentId,
+          score: calculatedScore,
+          total: calculatedTotal,
+          percentage: computedPct
+        });
+      }
     }
   }, [sessionId]);
 
