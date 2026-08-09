@@ -30,6 +30,7 @@ export default function Assessment() {
   const [codeOutput, setCodeOutput] = useState<any[]>([]);
   const [runError, setRunError] = useState<string | null>(null);
   const [showMobilePalette, setShowMobilePalette] = useState(false);
+  const [mobileCodeTab, setMobileCodeTab] = useState<"editor" | "testcases">("editor");
   
   useEffect(() => {
     const data = assessmentData[assessmentId as keyof typeof assessmentData] || coreCsData;
@@ -121,6 +122,7 @@ export default function Assessment() {
     }
 
     setCodeOutput(results);
+    setMobileCodeTab("testcases");
 
     const passedCount = results.filter(r => r.passed).length;
     const updated = { ...answers, [q.id]: { attempted: true, passedCount, total: results.length } };
@@ -333,68 +335,117 @@ export default function Assessment() {
               </div>
             )}
 
-            {/* Coding Challenge View (Responsive Split) */}
+            {/* Coding Challenge View (Responsive Tabbed Layout for Mobile) */}
             {currentQ.kind === "code" && (
-              <div className="mt-6 flex flex-col lg:flex-row h-auto lg:h-[500px] gap-4">
-                <div className="flex-1 rounded-xl border border-white/10 overflow-hidden bg-[#1e1e1e] flex flex-col h-[320px] sm:h-[400px] lg:h-full">
-                  <div className="flex h-10 items-center justify-between border-b border-white/10 px-4 bg-black/20 shrink-0">
-                    <div className="flex items-center gap-2 text-xs text-white/60">
-                      <Code2 size={14} /> main.js
-                    </div>
-                    <button onClick={runCode} className="flex items-center gap-1.5 rounded-lg bg-green-hard px-3 py-1 text-xs font-semibold text-white hover:brightness-110 transition-all">
-                      <Play size={12} fill="currentColor" /> ▶ Run Code
-                    </button>
-                  </div>
-                  <div className="flex-1 relative">
-                    <Editor
-                      height="100%"
-                      language={currentQ.language ?? "javascript"}
-                      theme="vs-dark"
-                      defaultValue={currentQ.starterCode}
-                      value={codeMap[currentQ.id] ?? currentQ.starterCode}
-                      onChange={(val) => handleCodeChange(currentQ, val)}
-                      options={{
-                        minimap: { enabled: false },
-                        fontSize: 13,
-                        scrollBeyondLastLine: false,
-                        wordWrap: "on",
-                        automaticLayout: true,
-                      }}
-                    />
-                  </div>
-                </div>
-                
-                <div className="w-full lg:w-80 rounded-xl border border-white/10 bg-white/5 flex flex-col h-[200px] lg:h-full shrink-0">
-                  <div className="flex h-10 items-center border-b border-white/10 px-4 text-xs font-semibold text-white/60 shrink-0">
-                    Test Cases
-                  </div>
-                  <div className="flex-1 p-4 overflow-y-auto flex flex-col gap-3">
-                    {runError && (
-                      <div className="rounded-lg border border-rose/30 bg-rose/10 p-3 text-xs text-rose font-mono">
-                        ⚠ {runError}
-                      </div>
+              <div className="mt-6 flex flex-col gap-4">
+                {/* Mobile Sub-Navigation Tabs (< lg) */}
+                <div className="flex items-center gap-2 lg:hidden border-b border-white/10 pb-3 shrink-0">
+                  <button
+                    onClick={() => setMobileCodeTab("editor")}
+                    className={`flex items-center gap-2 rounded-xl px-4 py-2 text-xs font-semibold transition-all ${
+                      mobileCodeTab === "editor" 
+                        ? "bg-green-hard text-white shadow-lg" 
+                        : "bg-white/5 text-white/60 hover:bg-white/10"
+                    }`}
+                  >
+                    <Code2 size={14} /> Code Editor
+                  </button>
+                  <button
+                    onClick={() => setMobileCodeTab("testcases")}
+                    className={`flex items-center gap-2 rounded-xl px-4 py-2 text-xs font-semibold transition-all ${
+                      mobileCodeTab === "testcases" 
+                        ? "bg-green-hard text-white shadow-lg" 
+                        : "bg-white/5 text-white/60 hover:bg-white/10"
+                    }`}
+                  >
+                    <Check size={14} /> Test Cases
+                    {codeOutput.length > 0 && (
+                      <span className="ml-1 rounded-full bg-white/20 px-1.5 py-0.5 text-[10px]">
+                        {codeOutput.filter(r => r.passed).length}/{codeOutput.length}
+                      </span>
                     )}
-                    {codeOutput.length > 0 ? codeOutput.map((res, i) => (
-                      <div key={i} className={`rounded-lg border p-3 ${res.passed ? 'border-green-hard/30 bg-green-hard/10' : 'border-rose/30 bg-rose/10'}`}>
-                        <div className="flex items-center gap-2 mb-1.5 font-mono text-xs">
-                          {res.passed ? <Check size={14} className="text-green-hard" /> : <X size={14} className="text-rose" />}
-                          <span className={res.passed ? 'text-green-hard' : 'text-rose'}>Test {i + 1}</span>
-                        </div>
-                        <div className="text-[10px] text-white/60 font-mono space-y-1">
-                          <div>Input: {res.input}</div>
-                          <div>Expected: {res.expected}</div>
-                          <div>Actual: {res.actual}</div>
-                        </div>
+                  </button>
+                </div>
+
+                {/* Container View */}
+                <div className="flex flex-col lg:flex-row h-[420px] sm:h-[480px] lg:h-[520px] gap-4">
+                  {/* Editor Panel */}
+                  <div className={`flex-1 rounded-xl border border-white/10 overflow-hidden bg-[#1e1e1e] flex-col h-full ${
+                    mobileCodeTab === "editor" ? "flex" : "hidden lg:flex"
+                  }`}>
+                    <div className="flex h-10 items-center justify-between border-b border-white/10 px-4 bg-black/30 shrink-0">
+                      <div className="flex items-center gap-2 text-xs text-white/70 font-mono">
+                        <Code2 size={14} className="text-green-hard" /> main.js
                       </div>
-                    )) : currentQ.testCases.map((tc: any, i: number) => (
-                      <div key={i} className="rounded-lg border border-white/10 bg-black/20 p-3">
-                        <div className="text-xs font-medium text-white/80 mb-1.5">Test Case {i + 1}</div>
-                        <div className="font-mono text-[10px] text-white/50 space-y-1">
-                          <div>Input: {tc.input}</div>
-                          <div>Expected: {tc.expectedOutput}</div>
+                      <button 
+                        onClick={runCode} 
+                        className="flex items-center gap-1.5 rounded-lg bg-green-hard px-3 py-1 text-xs font-semibold text-white hover:brightness-110 active:scale-95 transition-all shadow-md"
+                      >
+                        <Play size={12} fill="currentColor" /> ▶ Run Code
+                      </button>
+                    </div>
+                    <div className="flex-1 relative w-full h-full min-h-[300px]">
+                      <Editor
+                        height="100%"
+                        width="100%"
+                        language={currentQ.language ?? "javascript"}
+                        theme="vs-dark"
+                        defaultValue={currentQ.starterCode}
+                        value={codeMap[currentQ.id] ?? currentQ.starterCode}
+                        onChange={(val) => handleCodeChange(currentQ, val)}
+                        options={{
+                          minimap: { enabled: false },
+                          fontSize: 13,
+                          scrollBeyondLastLine: false,
+                          wordWrap: "on",
+                          automaticLayout: true,
+                          lineNumbersMinChars: 3,
+                          padding: { top: 10, bottom: 10 }
+                        }}
+                      />
+                    </div>
+                  </div>
+                  
+                  {/* Test Cases Panel */}
+                  <div className={`w-full lg:w-80 rounded-xl border border-white/10 bg-white/5 flex-col h-full shrink-0 ${
+                    mobileCodeTab === "testcases" ? "flex" : "hidden lg:flex"
+                  }`}>
+                    <div className="flex h-10 items-center justify-between border-b border-white/10 px-4 text-xs font-semibold text-white/70 shrink-0 bg-black/20">
+                      <span>Test Cases</span>
+                      {codeOutput.length > 0 && (
+                        <span className="text-[11px] text-green-hard font-mono font-bold">
+                          {codeOutput.filter(r => r.passed).length}/{codeOutput.length} Passed
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex-1 p-4 overflow-y-auto flex flex-col gap-3">
+                      {runError && (
+                        <div className="rounded-lg border border-rose/30 bg-rose/10 p-3 text-xs text-rose font-mono">
+                          ⚠ {runError}
                         </div>
-                      </div>
-                    ))}
+                      )}
+                      {codeOutput.length > 0 ? codeOutput.map((res, i) => (
+                        <div key={i} className={`rounded-lg border p-3.5 transition-all ${res.passed ? 'border-green-hard/40 bg-green-hard/10' : 'border-rose/40 bg-rose/10'}`}>
+                          <div className="flex items-center gap-2 mb-2 font-mono text-xs font-semibold">
+                            {res.passed ? <Check size={14} className="text-green-hard" /> : <X size={14} className="text-rose" />}
+                            <span className={res.passed ? 'text-green-hard' : 'text-rose'}>Test Case {i + 1}</span>
+                          </div>
+                          <div className="text-[11px] text-white/70 font-mono space-y-1 bg-black/30 p-2.5 rounded-md border border-white/5">
+                            <div><span className="text-white/40">Input:</span> {res.input}</div>
+                            <div><span className="text-white/40">Expected:</span> {res.expected}</div>
+                            <div><span className="text-white/40">Actual:</span> <span className={res.passed ? 'text-green-hard' : 'text-rose'}>{res.actual}</span></div>
+                          </div>
+                        </div>
+                      )) : currentQ.testCases.map((tc: any, i: number) => (
+                        <div key={i} className="rounded-lg border border-white/10 bg-black/20 p-3.5">
+                          <div className="text-xs font-semibold text-white/80 mb-2">Test Case {i + 1}</div>
+                          <div className="font-mono text-[11px] text-white/60 space-y-1 bg-black/30 p-2.5 rounded-md border border-white/5">
+                            <div><span className="text-white/40">Input:</span> {tc.input}</div>
+                            <div><span className="text-white/40">Expected:</span> {tc.expectedOutput}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
