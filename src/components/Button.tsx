@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import type { ReactNode } from "react";
 
 type ButtonProps = {
@@ -23,9 +24,18 @@ export default function Button({
   className = "",
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold font-display transition-colors duration-200 whitespace-nowrap";
+    "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold font-display transition-colors duration-200 whitespace-nowrap cursor-pointer";
 
   if (href) {
+    if (href.startsWith("/") && !href.startsWith("/#")) {
+      return (
+        <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="inline-block">
+          <Link to={href} className={`${base} ${styles[variant]} ${className}`}>
+            {children}
+          </Link>
+        </motion.div>
+      );
+    }
     return (
       <motion.a
         href={href}
