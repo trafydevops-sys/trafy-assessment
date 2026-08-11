@@ -20,6 +20,7 @@ export type NavbarProps = {
 const defaultLinks: NavLink[] = [
   { label: "For Talent", href: "https://www.trafy.ai/#talent" },
   { label: "Employability Index", href: "https://www.trafy.ai/#employability" },
+  { label: "Assessment", href: "/" },
   {
     label: "Cohort",
     href: "https://www.trafy.ai/cohort/",
